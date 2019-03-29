@@ -16,7 +16,8 @@ namespace pingt
                 if (args.Length>0)
                 {
                     cHost = args[0];
-                } else
+                } 
+                if (string.IsNullOrEmpty(cHost))
                 {
                     cHost = "www.google.com";
                 }
