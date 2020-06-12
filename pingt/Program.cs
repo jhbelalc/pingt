@@ -31,24 +31,37 @@ namespace pingt
                     nPing++;
                     if (reply != null)
                     {
+                        if (reply.Status!=IPStatus.Success){
+                            Console.ForegroundColor=ConsoleColor.Red;
+                            nError++;
+                        }
                         Console.WriteLine(System.DateTime.Now.ToString() + " Reply from " + reply.Address + " bytes=32 Time: " + reply.RoundtripTime.ToString() + " Status: " + reply.Status);
+                        if (Console.ForegroundColor!=ConsoleColor.White){
+                            Console.ForegroundColor=ConsoleColor.White;
+                        }
                     }
                     else
                     {
+                        Console.ForegroundColor= ConsoleColor.Red;
                         Console.WriteLine(System.DateTime.Now.ToString() + "No response");
+                        Console.ForegroundColor=ConsoleColor.White;
                         nError++;
                     }
                     System.Threading.Thread.Sleep(1000);
                     if (_cancelled)
                     {
+                        Console.ForegroundColor=ConsoleColor.Green;
                         Console.WriteLine("Total pings: " + nPing.ToString() + " Errors: " + nError.ToString());
+                        Console.ForegroundColor=ConsoleColor.White;
                         Environment.Exit(0);
                     };
                 }
             }
             catch (InvalidCastException e)
             {
+                Console.ForegroundColor=ConsoleColor.Red;
                 Console.WriteLine("ERROR in Pingt "+e.Message);
+                Console.ForegroundColor=ConsoleColor.White;
             }
 
             Console.ReadKey();
