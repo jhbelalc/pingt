@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Net.NetworkInformation;
-using System.Timers;
 
 namespace pingt
 {
