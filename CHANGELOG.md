@@ -5,7 +5,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
+## [Unreleased](https://github.com/jhbelalc/pingt/compare/v2.0.1...HEAD)
 
 ### Planned
 - Configuration file support
@@ -13,6 +13,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Batch ping mode
 - JSON output format
 - Cross-platform installer
+
+## [2.0.1](https://github.com/jhbelalc/pingt/compare/v2.0.0...v2.0.1) - 2026-05-28
+
+### Fixed
+- Fixed error when running the binary on Windows: `hostpolicy.dll` was missing
+- Publish method changed to single-file self-contained (`PublishSingleFile=true`)
+- Release binaries now include the embedded .NET runtime
+
+### Changed
+- Updated CI/CD workflow to generate a single executable per platform
+- Removed auxiliary release files (`.dll`, `.deps.json`, `.runtimeconfig.json`)
 
 ## [2.0.0] - 2026-05-29
 
@@ -56,6 +67,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Graceful exit with Ctrl+C
 - Basic statistics
 
-[Unreleased]: https://github.com/jhbelalc/pingt/compare/v2.0.0...HEAD
+[Unreleased]: https://github.com/jhbelalc/pingt/compare/v2.0.1...HEAD
+[2.0.1]: https://github.com/jhbelalc/pingt/compare/v2.0.0...v2.0.1
 [2.0.0]: https://github.com/jhbelalc/pingt/compare/v1.0.0...v2.0.0
 [1.0.0]: https://github.com/jhbelalc/pingt/releases/tag/v1.0.0
