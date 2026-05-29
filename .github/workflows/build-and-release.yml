@@ -49,13 +49,26 @@ jobs:
         run: dotnet build -c Release --no-restore
 
       - name: Publish (self-contained)
-        run: dotnet publish -c Release -r ${{ matrix.rid }} --self-contained -o ./publish pingt/pingt.csproj
+        run: dotnet publish -c Release -r ${{ matrix.rid }} --self-contained -o ./publish/${{ matrix.rid }} pingt/pingt.csproj
+
+      - name: Package artifact (Linux/macOS)
+        if: matrix.os != 'windows-latest'
+        run: |
+          mkdir -p ./release
+          cp ./publish/${{ matrix.rid }}/pingt ./release/${{ matrix.artifact-name }}
+
+      - name: Package artifact (Windows)
+        if: matrix.os == 'windows-latest'
+        shell: cmd
+        run: |
+          mkdir release
+          copy publish\${{ matrix.rid }}\pingt.exe release\${{ matrix.artifact-name }}
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
           name: ${{ matrix.artifact-name }}
-          path: publish/pingt*
+          path: release/${{ matrix.artifact-name }}
           if-no-files-found: error
 
   release:
