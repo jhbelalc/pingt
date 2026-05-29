@@ -2,9 +2,10 @@
 
 A lightweight command-line tool that continuously pings a host, displaying results with timestamps and statistics. Perfect for monitoring network connectivity without overwhelming your console output.
 
-![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
-![.NET Version](https://img.shields.io/badge/.NET-6.0-blue)
-![Platform](https://img.shields.io/badge/Platform-Windows%2FmacOS%2FLinux-brightgreen)
+[![Build and Release](https://github.com/jhbelalc/pingt/actions/workflows/build-and-release.yml/badge.svg?branch=master)](https://github.com/jhbelalc/pingt/actions/workflows/build-and-release.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![.NET Version](https://img.shields.io/badge/.NET-6.0-blue)](https://dotnet.microsoft.com/download/dotnet/6.0)
+[![Platform](https://img.shields.io/badge/Platform-Windows%2FmacOS%2FLinux-brightgreen)](https://github.com/jhbelalc/pingt/releases)
 
 ## Features
 
