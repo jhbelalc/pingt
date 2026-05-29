@@ -7,5 +7,5 @@ Thank you for your interest in contributing! Here's how you can help:
 1. **Fork the repository**
 2. **Clone your fork** locally:
    ```bash
-   git clone https://github.com/YOUR-USERNAME/pingt.git
+   git clone https://github.com/jhbelalc/pingt.git
    cd pingt
