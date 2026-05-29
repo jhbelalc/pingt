@@ -90,7 +90,7 @@ namespace pingt
                     else
                     {
                         stats.IncrementErrors();
-                        ConsoleDisplay.DisplayPingResult(null);
+                        ConsoleDisplay.DisplayPingResult(null!);
                     }
 
                     pinger.Dispose();

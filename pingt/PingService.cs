@@ -8,7 +8,7 @@ namespace pingt
     /// <summary>
     /// Service responsible for executing ping operations
     /// </summary>
-    public class PingService
+    public class PingService : IDisposable
     {
         private readonly int _timeoutMs;
         private readonly int _delayBetweenPingsMs;
