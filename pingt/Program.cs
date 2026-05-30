@@ -15,6 +15,7 @@ namespace pingt
         {
             string host = ParseHost(args);
             var cts = new CancellationTokenSource();
+            var startTime = DateTime.Now;
 
             // Handle Ctrl+C gracefully
             Console.CancelKeyPress += (sender, e) =>
@@ -50,7 +51,7 @@ namespace pingt
                 }
                 finally
                 {
-                    ConsoleDisplay.DisplayStatistics(stats);
+                    ConsoleDisplay.DisplayStatistics(stats, startTime, DateTime.Now);
                 }
             }
         }
