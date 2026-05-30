@@ -14,6 +14,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - JSON output format
 - Cross-platform installer
 
+## [2.0.2](https://github.com/jhbelalc/pingt/compare/v2.0.1...v2.0.2) - 2026-05-29
+
+### Added
+- Displays the session end date and time when CTRL+C is pressed.
+- Displays the total execution time (start, end, and duration) before statistics.
+- Displays the program version in the header upon startup.
+
 ## [2.0.1](https://github.com/jhbelalc/pingt/compare/v2.0.0...v2.0.1) - 2026-05-28
 
 ### Fixed
@@ -67,7 +74,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Graceful exit with Ctrl+C
 - Basic statistics
 
-[Unreleased]: https://github.com/jhbelalc/pingt/compare/v2.0.1...HEAD
+[Unreleased]: https://github.com/jhbelalc/pingt/compare/v2.0.2...HEAD
+[2.0.2]: https://github.com/jhbelalc/pingt/compare/v2.0.1...v2.0.2
 [2.0.1]: https://github.com/jhbelalc/pingt/compare/v2.0.0...v2.0.1
 [2.0.0]: https://github.com/jhbelalc/pingt/compare/v1.0.0...v2.0.0
 [1.0.0]: https://github.com/jhbelalc/pingt/releases/tag/v1.0.0
