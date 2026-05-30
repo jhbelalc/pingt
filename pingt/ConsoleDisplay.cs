@@ -10,8 +10,10 @@ namespace pingt
     {
         public static void DisplayHeader(string host)
         {
+            var version = System.Reflection.Assembly.GetExecutingAssembly()
+                      .GetName().Version?.ToString(3) ?? "unknown";
             Console.WriteLine(new string('=', 80));
-            Console.WriteLine($"{DateTime.Now:yyyy-MM-dd HH:mm:ss} - Pinging {host}");
+            Console.WriteLine($"pingt v{version} - {DateTime.Now:yyyy-MM-dd HH:mm:ss} - Pinging {host}");
             Console.WriteLine("Press CTRL+C to exit");
             Console.WriteLine(new string('=', 80));
         }
