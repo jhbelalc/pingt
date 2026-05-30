@@ -41,9 +41,16 @@ namespace pingt
             WriteError($"{DateTime.Now:yyyy-MM-dd HH:mm:ss} - ERROR: {message}");
         }
 
-        public static void DisplayStatistics(PingStatistics stats)
+        public static void DisplayStatistics(PingStatistics stats, DateTime startTime, DateTime endTime)
         {
+            TimeSpan elapsed = endTime - startTime;
+
             Console.WriteLine();
+            Console.WriteLine(new string('=', 80));
+            Console.WriteLine($"{endTime:yyyy-MM-dd HH:mm:ss} - Session ended");
+            Console.WriteLine($"Start: {startTime:yyyy-MM-dd HH:mm:ss}  |  " +
+                            $"End: {endTime:yyyy-MM-dd HH:mm:ss}  |  " +
+                            $"Duration: {(int)elapsed.TotalHours:D2}:{elapsed.Minutes:D2}:{elapsed.Seconds:D2}");
             Console.WriteLine(new string('=', 80));
             WriteSuccess($"Ping Statistics: {stats}");
             Console.WriteLine(new string('=', 80));
