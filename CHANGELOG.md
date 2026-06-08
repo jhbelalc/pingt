@@ -14,6 +14,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - JSON output format
 - Cross-platform installer
 
+## [2.0.3](https://github.com/jhbelalc/pingt/compare/v2.0.2...v2.0.3) - 2026-06-07
+
+### Changed
+- Migrated from .NET 6.0 to .NET 10.0 LTS
+- Updated workflow of CI/CD to compile with .NET 10.0
+- Updated badge of .NET in README
+
 ## [2.0.2](https://github.com/jhbelalc/pingt/compare/v2.0.1...v2.0.2) - 2026-05-29
 
 ### Added
@@ -74,7 +81,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Graceful exit with Ctrl+C
 - Basic statistics
 
-[Unreleased]: https://github.com/jhbelalc/pingt/compare/v2.0.2...HEAD
+[Unreleased]: https://github.com/jhbelalc/pingt/compare/v2.0.3...HEAD
+[2.0.3]: https://github.com/jhbelalc/pingt/compare/v2.0.2...v2.0.3
 [2.0.2]: https://github.com/jhbelalc/pingt/compare/v2.0.1...v2.0.2
 [2.0.1]: https://github.com/jhbelalc/pingt/compare/v2.0.0...v2.0.1
 [2.0.0]: https://github.com/jhbelalc/pingt/compare/v1.0.0...v2.0.0
