@@ -14,6 +14,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - JSON output format
 - Cross-platform installer
 
+## [2.0.4](https://github.com/jhbelalc/pingt/compare/v2.0.3...v2.0.4) - 2026-06-09
+
+### Added
+- Pings counter for each line (ie: `[42]`)
+- Counter implemented as `long` to keep several days with no overflow
+
 ## [2.0.3](https://github.com/jhbelalc/pingt/compare/v2.0.2...v2.0.3) - 2026-06-07
 
 ### Changed
@@ -81,7 +87,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Graceful exit with Ctrl+C
 - Basic statistics
 
-[Unreleased]: https://github.com/jhbelalc/pingt/compare/v2.0.3...HEAD
+[Unreleased]: https://github.com/jhbelalc/pingt/compare/v2.0.4...HEAD
+[2.0.4]: https://github.com/jhbelalc/pingt/compare/v2.0.3...v2.0.4
 [2.0.3]: https://github.com/jhbelalc/pingt/compare/v2.0.2...v2.0.3
 [2.0.2]: https://github.com/jhbelalc/pingt/compare/v2.0.1...v2.0.2
 [2.0.1]: https://github.com/jhbelalc/pingt/compare/v2.0.0...v2.0.1

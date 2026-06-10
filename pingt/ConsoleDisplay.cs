@@ -18,29 +18,30 @@ namespace pingt
             Console.WriteLine(new string('=', 80));
         }
 
-        public static void DisplayPingResult(PingReply reply)
+        public static void DisplayPingResult(PingReply reply, long pingNumber)
         {
             if (reply == null)
             {
-                WriteError($"{DateTime.Now:yyyy-MM-dd HH:mm:ss} - No response from host");
+                WriteError($"{DateTime.Now:yyyy-MM-dd HH:mm:ss} - No response from host [{pingNumber}]");
                 return;
             }
 
             if (reply.Status == IPStatus.Success)
             {
                 WriteSuccess($"{DateTime.Now:yyyy-MM-dd HH:mm:ss} - Reply from {reply.Address}: " +
-                            $"bytes=32 time={reply.RoundtripTime}ms TTL={reply.Options?.Ttl ?? 0}");
+                            $"bytes=32 time={reply.RoundtripTime}ms TTL={reply.Options?.Ttl ?? 0} [{pingNumber}]");
             }
             else
             {
                 WriteError($"{DateTime.Now:yyyy-MM-dd HH:mm:ss} - Reply from {reply.Address}: " +
-                          $"Status={reply.Status}");
+                          $"Status={reply.Status} [{pingNumber}]");
             }
         }
 
-        public static void DisplayError(string message)
+        public static void DisplayError(string message, long pingNumber = 0)
         {
-            WriteError($"{DateTime.Now:yyyy-MM-dd HH:mm:ss} - ERROR: {message}");
+            var counter = pingNumber > 0 ? $" [{pingNumber}]" : string.Empty;
+            WriteError($"{DateTime.Now:yyyy-MM-dd HH:mm:ss} - ERROR: {message}{counter}");
         }
 
         public static void DisplayStatistics(PingStatistics stats, DateTime startTime, DateTime endTime)
