@@ -86,12 +86,12 @@ namespace pingt
                     if (reply != null)
                     {
                         stats.UpdateFromReply(reply);
-                        ConsoleDisplay.DisplayPingResult(reply);
+                        ConsoleDisplay.DisplayPingResult(reply, stats.TotalPings);
                     }
                     else
                     {
                         stats.IncrementErrors();
-                        ConsoleDisplay.DisplayPingResult(null!);
+                        ConsoleDisplay.DisplayPingResult(null!, stats.TotalPings);
                     }
 
                     pinger.Dispose();
@@ -99,7 +99,7 @@ namespace pingt
                 catch (PingException ex)
                 {
                     stats.IncrementErrors();
-                    ConsoleDisplay.DisplayError($"Ping failed: {ex.Message}");
+                    ConsoleDisplay.DisplayError($"Ping failed: {ex.Message}, stats.TotalPings");
                 }
                 catch (OperationCanceledException)
                 {

@@ -8,14 +8,14 @@ namespace pingt
     /// </summary>
     public class PingStatistics
     {
-        private int _totalPings;
+        private long _totalPings;
         private int _errors;
         private long _minRoundtripTime = long.MaxValue;
         private long _maxRoundtripTime = long.MinValue;
         private long _totalRoundtripTime;
         private int _successfulPings;
 
-        public int TotalPings => _totalPings;
+        public long TotalPings => _totalPings;
         public int Errors => _errors;
         public int SuccessfulPings => _successfulPings;
         public long MinRoundtripTime => _minRoundtripTime == long.MaxValue ? 0 : _minRoundtripTime;
